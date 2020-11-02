@@ -50,7 +50,7 @@ while($row2 = mysqli_fetch_array($result2))
             }
 
         </style>
-
+            
     </head>
 
     <body>
