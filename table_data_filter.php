@@ -3,14 +3,14 @@
 if(isset($_POST['search']))
 {
     $valueToSearch = $_POST['valueToSearch'];
-    // search in all table columns
-    // using concat mysql function
-    $query = "SELECT * FROM `users` WHERE CONCAT(`id`, `fname`, `lname`, `age`) LIKE '%".$valueToSearch."%'";
-    $search_result = filterTable($query);
-    
+    // search all
+    if ($valueToSearch == "all") $valueToSearch = 5066
+
+    $query = "SELECT * FROM `users` WHERE id <= $valueToSearch";
+    $search_result = filterTable($query);    
 }
  else {
-    $query = "SELECT * FROM `users`";
+    $query = "SELECT * FROM `users` WHERE id <= 10";
     $search_result = filterTable($query);
 }
 
