@@ -1,0 +1,6 @@
+1. create empty database
+2. import data from archive
+3. query in dbForgeStudio (SELECT subject, faculty, type FROM studentData 
+WHERE db.faculty = 'info' AND db.type = 'masters'
+INNER JOIN faculty on faculty.ID = studentData.facultyID)
+4. screenshot of result
