@@ -1,0 +1,88 @@
+<html>
+   <form action="index.php" method="post">
+      <select name="family">
+         <option value="" selected="selected">Any family</option>
+         <option value="capacitor">capacitor</option>
+         <option value="resistor">resistor</option>
+         <option value="ferrite bead">ferrite bead</option>
+      </select>
+      <input name="search" type="submit" value="Search"/>
+   </form>
+   <head>
+      <meta charset = "UTF-8">
+      <title>test.php</title>
+         <style>
+            table {
+            border-collapse: collapse;
+            width: 50%;
+            }
+            th, td {
+            input: "text";
+            text-align: left;
+            padding: 8px;
+            }
+            th {
+            background-color: SkyBlue;
+            }
+            tr:nth-child(odd) {background-color: #f2f2f2;}
+            tr:hover {background-color: AliceBlue;} 
+         </style>
+   </head>
+
+<body>
+   <p>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+  // Set our data
+  var data = [{
+      ID: 1,
+      Family: 'resistor',
+      Capacitance: 7,
+      Voltage: 6,
+      Price: 25.6
+    },
+    {
+      ID: 2,
+      Family: 'capacitor',
+      Capacitance: 10,
+      Voltage: 10,
+      Price: 100.2
+    },
+    {
+      ID: 3,
+      Family: 'ferrite bead',
+      Capacitance: 1,
+      Voltage: 5,
+      Price: 35.6
+    },
+    {
+      ID: 4,
+      Family: 'resistor',
+      Capacitance: 1,
+      Voltage: 4,
+      Price: 35.6
+    },
+    {
+      ID: 5,
+      Family: 'capacitor',
+      Capacitance: 9,
+      Voltage: 4,
+      Price: 25.6
+    }
+  ];
+</script>
+
+
+<table id="data-table"></table>
+
+<p>Sort by:</p>
+<button class="sort">ID</button>
+<button class="sort">Family</button>
+<button class="sort">Capacitance</button>
+<button class="sort">Voltage</button>
+<button class="sort">Price</button>
+   </p>
+</body>
+
+</html>
